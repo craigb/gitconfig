@@ -3,7 +3,9 @@
 [push]
   default = current
 [core]
-  editor = 'gvim' -f
+  preloadindex = true
+  fscache = true
+  editor = code --wait
 [rebase]
   autoSquash = true
 [alias]
@@ -15,5 +17,12 @@
   pup = push -u
 [merge]
   conflictstyle = diff3
+  tool = vscode
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
+[diff]
+  algorithm = patience
 [status]
   showUntrackedFiles = all
+[rerere]
+  enabled = true
