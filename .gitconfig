@@ -11,6 +11,7 @@
   autoSquash = true
 [alias]
   l = log --graph --pretty=format:'%C(cyan)%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%C(yellow)%d%Creset'
+  ls = log --graph --pretty=format:'%C(cyan)%h%Creset -%Creset %B %Cgreen(%cr) %C(bold blue)<%an>%Creset%C(yellow)%d%Creset'
   ln = log --graph --pretty=format:'%C(cyan)%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%C(yellow)%d%Creset' -n
   last = log -n 1 --pretty=format:'%H'
   fshow = show --pretty="" --name-only
