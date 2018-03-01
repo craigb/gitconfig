@@ -18,7 +18,6 @@
   fup = commit --fixup
   sup = commit --squash
   pup = push -u
-  pre = pull --rebase
 [merge]
   conflictstyle = diff3
   tool = vscode
