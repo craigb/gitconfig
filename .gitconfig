@@ -1,4 +1,3 @@
-
 [credential]
   helper = manager
 [push]
@@ -6,7 +5,7 @@
 [core]
   preloadindex = true
   fscache = true
-  editor = code --wait
+  editor = code --new-window --disable-extension EditorConfig.EditorConfig --wait
 [rebase]
   autoSquash = true
 [alias]
@@ -18,6 +17,8 @@
   fup = commit --fixup
   sup = commit --squash
   pup = push -u
+  cup = clean -xdf -e packages/ -e .vs/ -e out/
+  mup = !"git checkout master; git pull -p; git checkout -; git merge master"
 [merge]
   conflictstyle = diff3
   tool = vscode
