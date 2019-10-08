@@ -19,12 +19,20 @@
   pup = push -u
   cup = clean -xdf -e packages/ -e .vs/ -e out/
   mup = !"git checkout master; git pull -p; git checkout -; git merge master"
+  rup = !"git checkout master; git pull -p; git checkout -; git rebase -i master"
+  when = log -1 --pretty=%aI -- 
 [merge]
   conflictstyle = diff3
   tool = vscode
 [mergetool "vscode"]
   cmd = code --wait $MERGED
+[difftool]
+  prompt = false
+[difftool "vscode"]
+  cmd = code $LOCAL $REMOTE --diff --wait $MERGED
+  trustExitCode = false
 [diff]
+  tool = vscode
   algorithm = patience
 [status]
   showUntrackedFiles = all
